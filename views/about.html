@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>About - Climate Solutions</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost text-xl">Climate Solutions</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a class="active" href="/about">About</a></li>
+                <li>
+                    <details>
+                        <summary>Sector</summary>
+                        <ul class="p-2 bg-base-100">
+                            <li><a href="/solutions/projects?sector=energy">Energy</a></li>
+                            <li><a href="/solutions/projects?sector=transportation">Transportation</a></li>
+                            <li><a href="/solutions/projects?sector=buildings">Buildings</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4">
+        <!-- Hero Section -->
+        <div class="hero min-h-[200px] bg-base-200 rounded-lg">
+            <div class="hero-content text-center">
+                <div class="max-w-md">
+                    <h1 class="text-5xl font-bold">About</h1>
+                    <p class="py-6">Programming Student at Seneca College</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+            <!-- Profile Image -->
+            <div class="flex justify-center">
+                <img src="img/myprofile.jpg" 
+                     alt="Profile" 
+                     class="rounded-lg shadow-xl w-full max-w-md">
+            </div>
+            
+            <!-- About Text -->
+            <div class="prose">
+                <h2>Gopal Sapkota</h2>
+                <p>Hello! I'm a computer programming studetn at Seneca College passionate about learning new web development technology.</p>
+                
+                <h3>My Background</h3>
+                <p>I'm currently studying in the WEB322 course, learning to build dynamic web applications with Node.js and Express. This project is about use of tailwind css and daisyui skills in creating a climate solutions database.</p>
+                
+                <h3>Interests</h3>
+                <ul>
+                    <li>AI automation</li>
+                    <li>Web development</li>
+                    <li>Data visualization</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

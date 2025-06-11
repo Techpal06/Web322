@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>Climate Solutions</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg">
+        <div class="flex-1">
+            <a href="/" class="btn btn-ghost text-xl">Climate Solutions</a>
+        </div>
+        <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+                <li><a href="/about">About</a></li>
+                <li>
+                    <details>
+                        <summary>Sector</summary>
+                        <ul class="p-2 bg-base-100">
+                            <li><a href="/solutions/projects?sector=energy">Energy</a></li>
+                            <li><a href="/solutions/projects?sector=transportation">Transportation</a></li>
+                            <li><a href="/solutions/projects?sector=buildings">Buildings</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4">
+        <div class="hero min-h-[300px] rounded-lg" style="background-image: url(https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80);">
+            <div class="hero-overlay bg-opacity-60 rounded-lg"></div>
+            <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                    <h1 class="mb-5 text-5xl font-bold">Explore Climate Solutions</h1>
+                    <p class="mb-5">Discover innovative projects working towards a sustainable future</p>
+                    <a href="/solutions/projects" class="btn btn-primary">View All Projects</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-12">
+            <!-- Project 1 Card -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80" alt="Solar Farm"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Solar Energy Initiative</h2>
+                    <p>Large-scale solar farm providing renewable energy to 10,000 homes annually.</p>
+                    <div class="card-actions justify-end">
+                        <a href="/solutions/projects/1" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 Card -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://img.masstransitmag.com/files/base/cygnus/mass/image/2020/09/16x9/TTC_john_tory_twitter.5f5af5274eac6.png?auto=format,compress&fit=max&q=45&w=950&width=950" alt="Electric Bus"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Electric Public Transit</h2>
+                    <p>City-wide transition to zero-emission electric buses reducing carbon footprint.</p>
+                    <div class="card-actions justify-end">
+                        <a href="/solutions/projects/2" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 Card -->
+            <div class="card bg-base-100 shadow-xl">
+                <figure><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Green Building"></figure>
+                <div class="card-body">
+                    <h2 class="card-title">Green Building Retrofit</h2>
+                    <p>Energy efficiency upgrades for commercial buildings reducing energy use by 40%.</p>
+                    <div class="card-actions justify-end">
+                        <a href="/solutions/projects/3" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
