@@ -8,7 +8,8 @@
 * 
 *  Name: Gopal Sapkota Student ID: 153389234 Date: 2025/06/11
 *
-*  Published URL: [Your Vercel URL]
+*  Published URL: https://web322-weld.vercel.app/
+                
 *
 ********************************************************************************/
 
@@ -20,6 +21,7 @@ const projectData = require("./modules/projects");
 const HTTP_PORT = process.env.PORT || 8080; 
 
 app.use(express.static("public")); 
+app.use(express.static(__dirname + '/public'));
 
 projectData.initialize().then(() => { 
     app.listen(HTTP_PORT, () => { 
