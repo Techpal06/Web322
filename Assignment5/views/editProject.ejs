@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Project - Climate Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <%- include('partials/navbar', {page: '' }) %>
+    
+    <div class="hero min-h-96 bg-base-200">
+        <div class="hero-content text-center">
+            <div class="max-w-md">
+                <h1 class="text-5xl font-bold">Edit Project</h1>
+                <p class="py-6"><%= project.title %></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-2xl mx-auto">
+            <form action="/solutions/editProject" method="POST" class="space-y-6">
+                <input type="hidden" name="id" value="<%= project.id %>">
+                
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Project Title</span>
+                    </label>
+                    <input type="text" name="title" value="<%= project.title %>" class="input input-bordered w-full" required>
+                </div>
+
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Feature Image URL</span>
+                    </label>
+                    <input type="url" name="feature_img_url" value="<%= project.feature_img_url %>" class="input input-bordered w-full" required>
+                </div>
+
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Sector</span>
+                    </label>
+                    <select name="sector_id" class="select select-bordered w-full" required>
+                        <% sectors.forEach(sector => { %>
+                            <option <%= (project.sector_id == sector.id) ? "selected" : "" %> value="<%= sector.id %>">
+                                <%= sector.sector_name %>
+                            </option>
+                        <% }) %>
+                    </select>
+                </div>
+
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Short Introduction</span>
+                    </label>
+                    <textarea name="intro_short" class="textarea textarea-bordered h-24" required><%= project.intro_short %></textarea>
+                </div>
+
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Short Summary</span>
+                    </label>
+                    <textarea name="summary_short" class="textarea textarea-bordered h-24" required><%= project.summary_short %></textarea>
+                </div>
+
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Impact</span>
+                    </label>
+                    <textarea name="impact" class="textarea textarea-bordered h-24" required><%= project.impact %></textarea>
+                </div>
+
+                <div class="form-control w-full">
+                    <label class="label">
+                        <span class="label-text">Original Source URL</span>
+                    </label>
+                    <input type="url" name="original_source_url" value="<%= project.original_source_url %>" class="input input-bordered w-full" required>
+                </div>
+
+                <div class="form-control w-full pt-4 flex flex-row gap-4">
+                    <button type="submit" class="btn btn-primary flex-1">Update Project</button>
+                    <a href="/solutions/deleteProject/<%= project.id %>" class="btn btn-error flex-1">Delete Project</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

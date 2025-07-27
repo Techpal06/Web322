@@ -1,0 +1,26 @@
+{
+  "name": "assignment4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "tw:build": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css",
+    "tw:watch": "tailwindcss -i ./public/css/tailwind.css -o ./public/css/main.css --watch"
+  },
+  "author": "Gopal Sapkota",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "daisyui": "^4.12.24",
+    "dotenv": "^17.2.1",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

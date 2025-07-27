@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/main.css" rel="stylesheet">
+    <title>About - Climate Solutions</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('partials/navbar', {page: '/about'}) %>
+    
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- Hero Section -->
+        <div class="hero min-h-[200px] bg-base-200 rounded-lg mb-12">
+            <div class="hero-content text-center">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl font-bold mb-4">About Me</h1>
+                    <p class="text-lg">Computer Programming Student at Seneca College</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Profile Image -->
+            <div class="flex justify-center">
+                <img src="img/myprofile.jpg" 
+                     alt="Profile" 
+                     class="rounded-lg shadow-lg w-full max-w-md">
+            </div>
+            
+            <!-- About Text -->
+            <div class="prose">
+                <h2 class="text-2xl font-bold mb-4">Gopal Sapkota</h2>
+                <p class="mb-6">Hello! I'm a computer programming student at Seneca College passionate about learning new web development technologies.</p>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">My Background</h3>
+                        <p>I'm currently studying in the WEB322 course, learning to build dynamic web applications with Node.js and Express. This project demonstrates my skills in using Tailwind CSS and DaisyUI to create a climate solutions database.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-xl font-semibold mb-3">Interests</h3>
+                        <ul class="list-disc pl-6 space-y-2">
+                            <li>AI automation</li>
+                            <li>Web development</li>
+                            <li>Data visualization</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
